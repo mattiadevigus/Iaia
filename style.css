@@ -13,3 +13,49 @@ body {
     background-color: #15151e;
     color: white
 }
+
+.polpo-animato {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fluttua 3s ease-in-out infinite;
+}
+
+.testa {
+    width: 140px;
+    height: 120px;
+    background: #c94c9a;
+    border-radius: 50% 50% 45% 45%;
+}
+
+.tentacoli {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    margin-left: -10px;
+}
+
+.tentacoli span {
+    width: 14px;
+    height: 80px;
+    background: #b33c86;
+    border-radius: 20px;
+    animation: onda 1.8s ease-in-out infinite;
+}
+
+.tentacoli span:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fluttua {
+    0% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -15px); }
+    100% { transform: translate(-50%, 0); }
+}
+
+@keyframes onda {
+    0% { transform: rotate(6deg); }
+    50% { transform: rotate(-12deg); }
+    100% { transform: rotate(6deg); }
+}
